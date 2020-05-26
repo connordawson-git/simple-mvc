@@ -15,3 +15,5 @@ define("ROOT_URL", "http://localhost:8888/simple-mvc/");
 define("HOME_TITLE", "Simple MVC");
 define("HOME_TAGLINE", "Welcome to Simple MVC");
 define("HOME_CTA", "Share Now");
+
+

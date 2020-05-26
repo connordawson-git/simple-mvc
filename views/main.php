@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo ROOT_URL;?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo ROOT_URL;?>assets/css/styles.css">
     <title>Simple MVC</title>
 </head>
 <body>
@@ -24,12 +24,17 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class=""><a href="<?php echo ROOT_URL; ?>">Home</a></li>
-            <li class=""><a href="<?php echo ROOT_URL; ?>shares">Shares</a></li>
+            <li class=""><a href="<?php echo ROOT_URL; ?>articles">Articles</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li class=""><a href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
-            <li class=""><a href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
+            <?php if(isset($_SESSION['is_logged_in'])) : ?>
+              <li class=""><a href="<?php echo ROOT_URL; ?>">Welcome <?php echo $_SESSION['user_data']['name'];?> </a></li>
+              <li class=""><a href="<?php echo ROOT_URL; ?>users/logout">Logout</a></li>
+            <?php else : ?>  
+              <li class=""><a href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
+              <li class=""><a href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
+            <?php endif; ?>  
           </ul>
         </div><!--/.nav-collapse -->
       </div>

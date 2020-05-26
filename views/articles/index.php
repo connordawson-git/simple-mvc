@@ -1,5 +1,5 @@
 <div>
-    <a href="<?php echo ROOT_PATH;?>shares/add" class="btn btn-success btn-share">Share Something</a>
+    <a href="<?php echo ROOT_PATH;?>articles/add" class="btn btn-success btn-share">Share Something</a>
     <?php foreach($viewModel as $item) : ?>
         <div class="well">
             <h3><?php echo $item["title"];?></h3>
