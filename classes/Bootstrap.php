@@ -25,7 +25,7 @@ class Bootstrap {
             //Check Extend
             if(in_array("Controller", $parents)){
                 if(method_exists($this->controller, $this->action)){
-                    return new $this->controller($this->action. $this->request);
+                    return new $this->controller($this->action, $this->request);
                 } else {
                     //Method Doesnt Exist
                     echo "<h1>Method does not exist</h1>";
