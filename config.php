@@ -8,5 +8,10 @@ define("DB_PASSWORD", "password");
 define("DB_NAME", "simple-MVC");
 
 //Define URL
-define("ROOT_PATH", "/");
-define("ROOT_URL", "http://localhost:8888/simple-mvc");
+define("ROOT_PATH", "/simple-mvc/");
+define("ROOT_URL", "http://localhost:8888/simple-mvc/");
+
+//Homepage config
+define("HOME_TITLE", "Simple MVC");
+define("HOME_TAGLINE", "Welcome to Simple MVC");
+define("HOME_CTA", "Share Now");
