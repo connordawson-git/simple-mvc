@@ -32,7 +32,7 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <?php if(isset($_SESSION['is_logged_in'])) : ?>
+            <?php if(isset($_SESSION['is_logged_in']) && !empty($_SESSION['is_logged_in'])) : ?>
               <li class=""><a href="<?php echo ROOT_URL; ?>">Welcome <?php echo $_SESSION['user_data']['name'];?> </a></li>
               <li class=""><a href="<?php echo ROOT_URL; ?>users/logout">Logout</a></li>
             <?php else : ?>  
