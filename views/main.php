@@ -22,9 +22,13 @@
           <a class="navbar-brand" href="#">Simple MVC</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class=""><a href="<?php echo ROOT_URL; ?>">Home</a></li>
-            <li class=""><a href="<?php echo ROOT_URL; ?>articles">Articles</a></li>
+          <ul class="nav navbar-nav">    
+            <?php if(isset($_SESSION['is_logged_in']) && !empty($_SESSION['is_logged_in'])) : ?>
+              <li class=""><a href="<?php echo ROOT_URL; ?>">Home</a></li>
+              <li class=""><a href="<?php echo ROOT_URL; ?>articles">Articles</a></li>
+            <?php else : ?>
+              <li class=""><a href="<?php echo ROOT_URL; ?>">Home</a></li>
+            <?php endif;?>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
