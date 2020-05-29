@@ -3,7 +3,7 @@
     <h3 class="panel-title">Register Login</h3>
   </div>
   <div class="panel-body">
-    <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
+    <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     	<div class="form-group">
     		<label>User Email</label>
     		<input type="text" name="email" class="form-control">
